@@ -1,0 +1,9 @@
+[Unit]
+Description = task2service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/prod/
+ExecStart=/bin/java -jar ./app.jar ./output.txt "Service is working!"
+Restart=on-failure
+RestartSec=10
